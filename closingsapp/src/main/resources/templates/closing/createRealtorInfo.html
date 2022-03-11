@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+
+<form method="post">
+    <div class="row">
+        <div class="form-group">
+            <label>Buyer Agents First Name
+                <input th:field="${realtorInformation.buyersAgentFirstName}" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.buyersAgentFirstName}" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label>Buyer Agents Last Name
+                <input th:field="${realtorInformation.buyersAgentLastName}" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.buyersAgentLastName}" class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label>Buyer Agents Phone Number
+                <input th:field="${realtorInformation.buyersAgentPhoneNumber}" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.buyersAgentPhoneNumber}" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label>Buyer Agents Email
+                <input th:field="${realtorInformation.buyersAgentEmail}" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.buyersAgentEmail}" class="error"></span>
+        </div>
+    </div>
+        <div class="row">
+        <div class="form-group">
+            <label>Buyer Agents Brokerage Firm
+                <input th:field="${realtorInformation.buyersAgentBrokerageFirm}" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.buyersAgentBrokerageFirm}" class="error"></span>
+        </div>
+            <div class="form-group">
+                <label>Buyers Agent Commission
+                    <input th:field="${realtorInformation.buyersAgentCommission}" class="form-control">
+                </label>
+                <span th:errors="${realtorInformation.buyersAgentCommission}" class="error"></span>
+            </div>
+            </div>
+    <div class="row">
+        <div class="form-group">
+            <label>Seller Agents First Name
+                <input th:field="${realtorInformation.sellersAgentFirstName" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.sellersAgentFirstName" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label>Seller Agents Last Name
+                <input th:field="${realtorInformation.sellersAgentLastName" class="form-control">
+            </label>
+            <span th:errors="${realtorInformation.sellersAgentLastName}" class="error"></span>
+        </div>
+    </div>
+    <div class="row">
+    <div class="form-group">
+        <label>Sellers Agent Phone Number
+            <input th:field="${realtorInformation.sellersAgentPhoneNumber}" class="form-control">
+        </label>
+        <span th:errors="${realtorInformation.sellersAgentPhoneNumber}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label>Sellers Agents Email
+            <input th:field="${realtorInformation.sellersAgentEmail}" class="form-control">
+        </label>
+        <span th:errors="${realtorInformation.sellersAgentEmail}" class="error"></span>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group">
+        <label>Seller Agents Brokerage Firm
+            <input th:field="${realtorInformation.sellersAgentBrokerageFirm}" class="form-control">
+        </label>
+        <span th:errors="${realtorInformation.sellersAgentBrokerageFirm}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label>Sellers Agent Commission
+            <input th:field="${realtorInformation.sellersAgentCommission}" class="form-control">
+        </label>
+        <span th:errors="${realtorInformation.sellersAgentCommission}" class="error"></span>
+    </div>
+    </div>
+    <input type="submit" value="Financial Information" class="btn btn-success">
+</form>
+</body>
+</html>
