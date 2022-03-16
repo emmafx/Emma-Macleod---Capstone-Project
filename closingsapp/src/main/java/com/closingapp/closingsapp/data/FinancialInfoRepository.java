@@ -1,4 +1,10 @@
 package com.closingapp.closingsapp.data;
 
-public interface FinancialInfoRepository {
+import com.closingapp.closingsapp.models.FinancialInformation;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface FinancialInfoRepository extends CrudRepository<FinancialInformation, Integer> {
+
 }

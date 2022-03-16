@@ -1,10 +1,30 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
 
+<form method="post">
+
+    <div class="form-group">
+        <label>Is Payoff Required?
+            <select th:field="${financialInformation.payoff}">
+                <option value=true>Yes</option>
+                <option value=false>No</option>
+            </select>
+        </label>
+    </div>
+    <div th:if="${financialInformation.payoff}">
+        <div class="form-control">
+            <label>Is Payoff Received?
+                <select th:field="${financialInformation.payoffReceived}">
+                    <option value=true>Yes</option>
+                    <option value=false>No</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <input type="submit" value="Property Information" class="btn btn-success">
+</form>
 </body>
 </html>
+

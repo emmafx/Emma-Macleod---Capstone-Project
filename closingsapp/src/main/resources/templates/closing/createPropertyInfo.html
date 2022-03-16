@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+
+<form method="post">
+    <div class="form-group">
+        <label>Street Address
+            <input th:field="${propertyInformation.streetAddress}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.streetAddress}" class="error"></span>
+    </div>
+    <div>
+        <label>Street Address
+            <input th:field="${propertyInformation.streetAddress2}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.streetAddress2}" class="error"></span>
+    </div>
+    <div>
+        <label>City
+            <input th:field="${propertyInformation.city}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.city}" class="error"></span>
+    </div>
+    <div>
+        <label>State
+            <input th:field="${propertyInformation.state}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.state}" class="error"></span>
+    </div>
+    <div>
+        <label>Zipcode
+            <input th:field="${propertyInformation.zipcode}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.zipcode}" class="error"></span>
+    </div>
+    <div>
+        <label>Parcel ID Number
+            <input th:field="${propertyInformation.parcelId}" class="form-control">
+        </label>
+        <span th:errors="${propertyInformation.parcelId}" class="error"></span>
+    </div>
+    <input type="submit" value="HOA Information" class="btn btn-success">
+</form>
+</body>
+</html>

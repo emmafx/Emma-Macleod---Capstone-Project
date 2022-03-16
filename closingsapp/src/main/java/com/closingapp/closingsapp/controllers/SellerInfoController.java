@@ -21,21 +21,19 @@ public class SellerInfoController {
     private SellersInfoRepository sellersInfoRepository;
 
     @GetMapping("createSellerInfo")
-    public String renderSellerInfoForm(Model model) {
+    public String renderSellerInfoForm (Model model) {
         model.addAttribute("title", "Add Seller Information");
         model.addAttribute(new SellersInformation());
         return "closing/createSellerInfo";
     }
 
     @PostMapping("createSellerInfo")
-    public String processSellerInfoForm(@Valid @ModelAttribute SellersInformation sellersInformation, Errors errors, Model model) {
+    public String processSellerInfoForm (@Valid @ModelAttribute SellersInformation sellersInformation, Errors errors, Model model) {
         if (errors.hasErrors()) {
-            model.addAttribute("title", "Add Sellers Information");
-            model.addAttribute(sellersInformation);
+            model.addAttribute("title", "Add Seller Information");
             return "closing/createSellerInfo";
         }
         sellersInfoRepository.save(sellersInformation);
-        return "closing/createRealtorInfo";
+        return "redirect:/closing/createRealtorInfo";
     }
 }
-

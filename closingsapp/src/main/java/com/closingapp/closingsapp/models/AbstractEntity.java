@@ -37,21 +37,14 @@ public abstract class AbstractEntity {
     @NotBlank(message = "Email is required.")
     private String email;
 
-    @Size(max = 50)
-    private String realtorFirstName;
 
-    @Size(max = 50)
-    private String realtorLastName;
-
-    public AbstractEntity(String firstName, String lastName, String secondFirstName, String secondLastName, String contactNumber, String email, String realtorFirstName, String realtorLastName, int id) {
+    public AbstractEntity(String firstName, String lastName, String secondFirstName, String secondLastName, String contactNumber, String email, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.secondFirstName = secondFirstName;
         this.secondLastName = secondLastName;
         this.contactNumber = contactNumber;
         this.email = email;
-        this.realtorFirstName = realtorFirstName;
-        this.realtorLastName = realtorLastName;
         this.id = id;
     }
 
@@ -104,22 +97,6 @@ public abstract class AbstractEntity {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getRealtorFirstName() {
-        return realtorFirstName;
-    }
-
-    public void setRealtorFirstName(String realtorFirstName) {
-        this.realtorFirstName = realtorFirstName;
-    }
-
-    public String getRealtorLastName() {
-        return realtorLastName;
-    }
-
-    public void setRealtorLastName(String realtorLastName) {
-        this.realtorLastName = realtorLastName;
     }
 
     public int getId() {

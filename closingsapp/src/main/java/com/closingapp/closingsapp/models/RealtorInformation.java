@@ -21,8 +21,8 @@ public class RealtorInformation {
     @Size(max = 50, message = "Name must be under 50 characters.")
     private String buyersAgentLastName;
 
-    @Range(min = 10, max = 11, message = "Phone number must be between 10-11 numbers.")
-    private int buyersAgentPhoneNumber;
+    @Size(min = 10, max = 11, message = "Phone number must be between 10-11 numbers.")
+    private String buyersAgentPhoneNumber;
 
     @Email
     private String buyersAgentEmail;
@@ -39,8 +39,8 @@ public class RealtorInformation {
     @Size(max = 50, message = "Name must be under 50 characters.")
     private String sellersAgentLastName;
 
-    @Range(min = 10, max = 11, message = "Phone number must be between 10-11 numbers.")
-    private int sellersAgentPhoneNumber;
+    @Size(min = 10, max = 11, message = "Phone number must be between 10-11 numbers.")
+    private String sellersAgentPhoneNumber;
 
     @Email
     private String sellersAgentEmail;
@@ -56,7 +56,7 @@ public class RealtorInformation {
     public RealtorInformation() {
     }
 
-    public RealtorInformation(int id, String buyersAgentFirstName, String buyersAgentLastName, int buyersAgentPhoneNumber, String buyersAgentEmail, String buyersAgentBrokerageFirm, int buyersAgentCommission, String sellersAgentFirstName, String sellersAgentLastName, int sellersAgentPhoneNumber, String sellersAgentEmail, String sellersAgentBrokerageFirm, int sellersAgentCommission) {
+    public RealtorInformation(int id, String buyersAgentFirstName, String buyersAgentLastName, String buyersAgentPhoneNumber, String buyersAgentEmail, String buyersAgentBrokerageFirm, int buyersAgentCommission, String sellersAgentFirstName, String sellersAgentLastName, String sellersAgentPhoneNumber, String sellersAgentEmail, String sellersAgentBrokerageFirm, int sellersAgentCommission) {
         this.id = id;
         this.buyersAgentFirstName = buyersAgentFirstName;
         this.buyersAgentLastName = buyersAgentLastName;
@@ -66,6 +66,8 @@ public class RealtorInformation {
         this.buyersAgentCommission = buyersAgentCommission;
         this.sellersAgentFirstName = sellersAgentFirstName;
         this.sellersAgentLastName = sellersAgentLastName;
+        this.sellersAgentPhoneNumber = sellersAgentPhoneNumber;
+        this.sellersAgentEmail = sellersAgentEmail;
         this.sellersAgentBrokerageFirm = sellersAgentBrokerageFirm;
         this.sellersAgentCommission = sellersAgentCommission;
     }
@@ -94,11 +96,11 @@ public class RealtorInformation {
         this.buyersAgentLastName = buyersAgentLastName;
     }
 
-    public int getBuyersAgentPhoneNumber() {
+    public String getBuyersAgentPhoneNumber() {
         return buyersAgentPhoneNumber;
     }
 
-    public void setBuyersAgentPhoneNumber(int buyersAgentPhoneNumber) {
+    public void setBuyersAgentPhoneNumber(String buyersAgentPhoneNumber) {
         this.buyersAgentPhoneNumber = buyersAgentPhoneNumber;
     }
 
@@ -142,11 +144,11 @@ public class RealtorInformation {
         this.sellersAgentLastName = sellersAgentLastName;
     }
 
-    public int getSellersAgentPhoneNumber() {
+    public String getSellersAgentPhoneNumber() {
         return sellersAgentPhoneNumber;
     }
 
-    public void setSellersAgentPhoneNumber(int sellersAgentPhoneNumber) {
+    public void setSellersAgentPhoneNumber(String sellersAgentPhoneNumber) {
         this.sellersAgentPhoneNumber = sellersAgentPhoneNumber;
     }
 
