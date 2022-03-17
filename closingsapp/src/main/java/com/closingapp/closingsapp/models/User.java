@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
 
     @NotNull
     private String username;
@@ -23,14 +23,6 @@ public class User {
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public User() {}
 
     public User(String username, String password) {
@@ -38,8 +30,18 @@ public class User {
         this.pwHash = encoder.encode(password);
     }
 
+
+
     public String getUsername() {
         return username;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public boolean isMatchingPassword(String password) {

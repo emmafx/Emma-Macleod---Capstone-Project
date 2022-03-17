@@ -13,15 +13,25 @@
             </select>
         </label>
     </div>
-    <div th:if="${financialInformation.payoff}">
-        <div class="form-control">
+        <div class="form-group">
             <label>Is Payoff Received?
                 <select th:field="${financialInformation.payoffReceived}">
                     <option value=true>Yes</option>
                     <option value=false>No</option>
                 </select>
             </label>
-        </div>
+    </div>
+    <div class="form-group">
+        <label>Bank Name
+            <input th:field="${financialInformation.bankName}" class="form-control">
+        </label>
+        <span th:errors="${financialInformation.bankName}" class="form-control"></span>
+    </div>
+    <div class="form-group">
+        <label>Payoff Number
+            <input th:field="${financialInformation.bankPayoffNumber}" class="form-control">
+        </label>
+        <span th:errors="${financialInformation.bankPayoffNumber}" class="errors"></span>
     </div>
     <input type="submit" value="Property Information" class="btn btn-success">
 </form>
